@@ -1,0 +1,21 @@
+<header role="banner">
+  <nav class="nav container" aria-label="Main navigation">
+    <div class="brand">Dream Wisdom — Noeli Lytton</div>
+    <div>
+      <a class="btn" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a class="btn" [routerLink]="['/']" fragment="resources">Resources</a>
+      <a class="btn" routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a class="btn" routerLink="/how-i-work" routerLinkActive="active">How I Work</a>
+      <a class="btn" routerLink="/symbol-dictionary" routerLinkActive="active">Symbol Dictionary</a>
+      <a class="btn" routerLink="/nightmare-self-help" routerLinkActive="active">Nightmare Self-Help</a>
+    </div>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="container">
+    <small>&copy; Noeli Lytton — Dream Wisdom. Contact: <a href="mailto:nlytton@charter.net">nlytton@charter.net</a> • 314-707-1256</small>
+  </div>
+</footer>

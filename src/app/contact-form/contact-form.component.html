@@ -1,0 +1,35 @@
+<aside id="contact" class="card" aria-labelledby="contact-form-heading">
+  <h3 id="contact-form-heading">Contact & Booking</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <label>
+      Name
+      <input formControlName="name" type="text" aria-required="true" />
+    </label>
+
+    <label>
+      Email
+      <input formControlName="email" type="email" aria-required="true" />
+    </label>
+
+    <label>
+      Phone
+      <input formControlName="phone" type="tel" />
+    </label>
+
+    <label>
+      Message
+      <textarea formControlName="message" rows="5" aria-required="true"></textarea>
+    </label>
+
+    <div class="form-actions">
+      <button class="btn" type="submit" [disabled]="sending">Send Message</button>
+      <a class="btn secondary" href="tel:314-707-1256">Call 314-707-1256</a>
+    </div>
+
+    <div class="alerts">
+      <div *ngIf="success" class="alert success" role="status">{{success}}</div>
+      <div *ngIf="error" class="alert error" role="alert">{{error}}</div>
+    </div>
+  </form>
+</aside>
